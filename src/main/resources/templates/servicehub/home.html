@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ServiceHub - Home</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(250, 248, 246);
+      }
+      /* Hero Slider Styles */
+      .hero-slider {
+        background-size: cover;
+        background-position: center;
+        animation: slide 30s infinite;
+        height: 100vh;
+      }
+
+      @keyframes slide {
+        0% {
+          background-image: url("/images/service_1.jpg");
+        }
+        20% {
+          background-image: url("/images/service2.jpg");
+        }
+        40% {
+          background-image: url("/images/service3.avif");
+        }
+        60% {
+          background-image: url("/images/service4.jpg");
+        }
+        80% {
+          background-image: url("/images/service6.jpeg");
+        }
+        100% {
+          background-image: url("/images/service5.jpg");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">ServiceHub</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/getHome}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/getHome#services}">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/your-requests}">your requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/aboutUs}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/Contact}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header
+      class="hero-slider d-flex align-items-center justify-content-center text-center text-white position-relative"
+    >
+      <div
+        class="position-absolute top-0 start-0 end-0 bottom-0 bg-dark opacity-50"
+      ></div>
+      <div class="position-relative z-1">
+        <h1 class="display-3 font-bold mb-4">Welcome to ServiceHub</h1>
+        <p class="fs-4 mb-5">
+          Connecting you with the best service professionals.
+        </p>
+        <a href="#services" class="btn btn-primary btn-lg">Explore Services</a>
+      </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/41890257.jpg"
+                class="card-img-top"
+                alt="AC Repair"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">AC Repair</h5>
+                <p class="card-text">
+                  Expert AC repair services to keep your home cool and
+                  comfortable.
+                </p>
+                <a th:href="@{/servicehub/Services/Ac-Services}" class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/car2.png"
+                class="card-img-top"
+                alt="Car Repair"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Car Repair</h5>
+                <p class="card-text">
+                  Reliable car repair services to keep your vehicle running
+                  smoothly.
+                </p>
+                <a th:href="@{/servicehub/Services/Car-Services}" class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/plumber4.jpg"
+                class="card-img-top"
+                alt="Plumbing"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Plumbing</h5>
+                <p class="card-text">
+                  Professional plumbing services for all your home needs.
+                </p>
+                <a th:href="@{/servicehub/Services/Plumber-Services}" class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/electrician.jpg"
+                class="card-img-top"
+                alt="Plumbing"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Electrician</h5>
+                <p class="card-text">
+                  Professional Electrician services for all your home needs.
+                </p>
+                <a
+                  th:href="@{/servicehub/Services/Electrician-Services}"
+                  class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/painter.jpg"
+                class="card-img-top"
+                alt="Plumbing"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Painter</h5>
+                <p class="card-text">
+                  Professional painter to make your home more colorful and
+                  beautiful.
+                </p>
+                <a th:href="@{/servicehub/Services/Painter-Services}" class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card shadow-sm h-100">
+              <img
+                src="/images/homeRepair.jpg"
+                class="card-img-top"
+                alt="Plumbing"
+                height="270px"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Home Repair</h5>
+                <p class="card-text">
+                  Experienced professionals who will carefully renovate your
+                  home with precision and attention to detail..
+                </p>
+                <a
+                  th:href="@{/servicehub/Services/Home-repair-Services}"
+                  class="btn btn-outline-primary"
+                  >Explore</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">What Our Clients Say</h2>
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-lg-6">
+            <div class="card p-4 shadow-sm">
+              <p class="mb-4">
+                "ServiceHub connected me with a fantastic electrician who fixed
+                my issues promptly and professionally."
+              </p>
+              <div class="d-flex align-items-center">
+                <div>
+                  <h6 class="mb-0">Aakash singh</h6>
+                  <small class="text-muted">Homeowner</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="col-lg-6">
+            <div class="card p-4 shadow-sm">
+              <p class="mb-4">
+                "Thanks to ServiceHub, my car is running like new after the
+                repair. Highly recommend their services!"
+              </p>
+              <div class="d-flex align-items-center">
+                <div>
+                  <h6 class="mb-0">Rina Kumari</h6>
+                  <small class="text-muted">Car Owner</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-5 text-center">
+      <div class="container">
+        <h2 class="mb-4">Ready to Get Started?</h2>
+        <p class="mb-4">
+          Find the best professionals for your needs with just a few clicks.
+        </p>
+        <a href="#services" class="btn btn-primary btn-lg">Browse Services</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <p class="mb-0">&copy; 2024 ServiceHub. All rights reserved.</p>
+        <div>
+          <a href="#" class="text-light mx-2">Privacy Policy</a>
+          <a href="#" class="text-light mx-2">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .container {
+            text-align: center;
+        }
+        h2 {
+            color: #dc3545;
+        }
+        .btn-group {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-login {
+            background-color: #007bff;
+        }
+        .btn-register {
+            background-color: #28a745;
+        }
+        .btn :hover{
+			cursor: pointer;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Not Found</h2>
+        <p>It looks like the user does not exist. Please try logging in or register a new account.</p>
+        <div class="btn-group">
+            <a th:href="@{/servicehub/login}" class="btn btn-login">Login</a>
+            <a th:href="@{/servicehub/register}" class="btn btn-register">Register</a>
+        </div>
+    </div>
+</body>
+</html>

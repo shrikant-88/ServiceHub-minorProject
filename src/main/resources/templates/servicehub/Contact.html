@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Global Reset */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(250, 248, 246);
+      }
+
+      .contact-header {
+        background-image: url("/images/Contact_final.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        color: white;
+        margin-top: 0;
+      }
+
+      .form-container {
+        margin-top: -50px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Ensure responsive styling for smaller screens */
+      .info-section {
+        padding: 50px 0;
+      }
+
+      .info-section h5 {
+        color: #007bff;
+      }
+
+      /* Adjust font size for mobile */
+      @media (max-width: 768px) {
+        .contact-header h1 {
+          font-size: 24px;
+        }
+
+        .contact-header p {
+          font-size: 16px;
+        }
+
+        .form-container {
+          margin-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">ServiceHub</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/getHome}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/getHome#services}">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/your-requests}">your requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/aboutUs}">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/servicehub/Contact}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="contact-header text-center">
+      <div></div>
+    </header>
+
+    <section
+      class="about-banner h-64 d-flex align-items-center justify-content-center text-white text-center"
+      style="background-color: aliceblue"
+    >
+      <h1 class="display-4" style="color: darkgoldenrod; margin-top: 15px">
+        CONTACT US
+      </h1>
+      <!-- <p class="display-4" style="color: darkgoldenrod; display: block">
+        We'd love to hear from you! Get in touch with us using the details
+        below.
+      </p> -->
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="info-section text-center container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Email Us</h5>
+          <p>info@servicehub.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Call Us</h5>
+          <p>+91 9876543210</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Visit Us</h5>
+          <p>123, Service Hub Street, Mumbai, India</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="container form-container text-center">
+      <h2>Send Us a Message</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="contactForm" action="Feedback.html" method="get">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p>&copy; 2024 ServiceHub. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
